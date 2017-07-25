@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Quicker</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="fixed-bg">
+	<div class="row">
+	<nav class="nav navbar-inverse navbar-fixed-top" style="width:100%;background-color:black;">
+				<div class="col-xs-6 col-md-4" >
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+								<span id="search_concept">Category</span> <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+							  <li><a href="#contains">Cars</a></li>
+							  <li><a href="#its_equal">Bikes</a></li>
+							  <li><a href="#greather_than">Mobiles & Tablets</a></li>
+							  <li><a href="#less_than">Books</a></li>
+							  <li><a href="#contains">Furniture</a></li>
+							  <li><a href="#its_equal">Home appliances</a></li>
+							  <li><a href="#greather_than">Accessories</a></li>
+							  <li class="divider"></li>
+							  <li><a href="#all">Anything</a></li>
+							</ul>
+						</div>
+						<input type="hidden" name="search_param" value="all" id="search_param">         
+						<input type="text" class="form-control" name="x" placeholder="Search for product">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
+						</span>
+					</div>				
+				</div>					
+					<big>
+						<a href="#" data-toggle="modal" data-target="#login"  >
+							<button class="btn btn-primary">
+							<span class="glyphicon glyphicon-user" ></span> Login 
+							</button>
+						</a>
+						<a href="#" data-toggle="modal" data-target="#register"  >
+							<button class="btn btn-primary">
+							<span class="glyphicon glyphicon-user" ></span> Register 
+							</button>
+						</a>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#post_ad">
+								Post Ad
+						</button>
+					</big>			
+	</nav>
+	</div>
+	
+	<br>
+	<div class="row imgDiv">	
+			<img onclick="openNav1()" src="https://s3.amazonaws.com/media-p.slid.es/uploads/429569/images/2122364/arrow_left.gif">Sell It
+			<br>			
+			Buy It<img onclick="openNav2()" src="https://s3.amazonaws.com/media-p.slid.es/uploads/429569/images/2112069/arrow.gif">
+	</div>
+	<div >
+		<div id="mySidenav1" class="sidenav_left fixed-bg">
+		  <button href="javascript:void(0)" class="btn btn-primary" onclick="closeNav1()">Home</button>
+		</div>
+
+		<div id="mySidenav2" class="sidenav_right fixed-bg">
+		  			<div class="timeline">	
+					<div class="container-fluid  panel panel-primary" id="new_ads" style="width:80%;margin-top:5%;">
+					<div class="panel-heading" style="background-color:black">
+					<h1 class="panel-title" >Newly Posted Ads
+					<a href="#" class="btn btn-primary" style="float:right;">
+					  <span class="glyphicon glyphicon-th"></span> View All
+					</a></h1>
+					</div>
+					<div class="row panel-body">
+						
+							<div class="hovereffect col-sm-4">
+								<img class="img-responsive" src="beetle1.jpg" alt="">
+								<div class="overlay">
+								   <h2>Image heading</h2>
+								   <p class="info">Our sleek quality work and  synergized effect of our team’s creative mind have paved the way for offering innovative services to our clients.
+								   <a href="#">read more</a></p>
+								</div>
+						
+							</div>
+							<div class="hovereffect col-sm-4">
+								<img class="img-responsive" src="iphone4.jpg" alt="">
+								<div class="overlay">
+								   <h2>Image heading</h2>
+								   <p class="info">Our sleek quality work and  synergized effect of our team’s creative mind have paved the way for offering innovative services to our clients.
+								   <a href="#">read more</a></p>
+								</div>
+						
+							</div>
+							<div class="hovereffect col-sm-4">
+								<img class="img-responsive" src="swift.png" alt="">
+								<div class="overlay">
+								   <h2>Image heading</h2>
+								   <p class="info">Our sleek quality work and  synergized effect of our team’s creative mind have paved the way for offering innovative services to our clients.
+								   <a href="#">read more</a></p>
+								</div>
+						
+							</div>
+					</div>
+				</div>	<!--end newly posted-->
+				</div>	<!--end if timeline-->
+		  
+		  <button href="javascript:void(0)" class="btn btn-primary" onclick="closeNav2()">Home</button>
+		</div>
+		
+		
+			<!-- Login modal-->
+		<div class="modal fade" id="login" role="dialog" style="background-image:url('http://www.whizjuniors.com/Content/img/banner.jpg');">
+			<div class="modal-dialog">
+			 <div class="modal-content">  
+				<div class="modal-header" style="background-color:black;color:white;">
+					 <h1>Login
+					 <button type="button" class="close" data-dismiss="modal"><big><span class="glyphicon glyphicon-remove-sign" style="color:white;"></big></span></button>
+					 </h1>
+				</div>
+				 <div class="modal-body">
+				 
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<input type="text" class="form-control" style="width:200px;" id="username" placeholder="Enter username">
+								<br>
+							<input type="password" class="form-control" style="width:200px;" id="pwd" placeholder="Enter password"><br>					
+						<button type="submit" class="btn btn-primary">Login</button><a href="#">Forgot Password?</a><br>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	       <!-- end of login modal-->			
+		   
+		   
+		   <!-- Registration modal-->
+		<div class="modal fade" id="register" role="dialog" style="background-image:url('http://www.whizjuniors.com/Content/img/banner.jpg');">
+			<div class="modal-dialog">
+			<div class="modal-content">	
+				<div class="modal-header" style="background-color:black;color:white;">
+					 <h1>Register
+					 <button type="button" class="close" data-dismiss="modal"><big><span class="glyphicon glyphicon-remove-sign" style="color:white;"></big></span></button>
+					 </h1>
+				</div>
+				
+			<div class="modal-body">	
+				<div>
+					<form align=center>
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="Enter first name">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="Enter last name">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="Enter preferred username">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="username" placeholder="Enter password">
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="username" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="Enter contact number">
+					</div>
+					
+					<div class="form-group">
+						<center><button type="submit" class="btn btn-success btn-lg" >Regsiter</button></center>
+					</div>
+				</form>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	       <!-- end of registration modal-->  
+		      <!-- Post Ad modal-->
+		<div class="modal fade" id="post_ad" role="dialog" style="background-image:url('http://www.whizjuniors.com/Content/img/banner.jpg');">
+			<div class="modal-dialog">
+			<div class="modal-content">	
+				<div class="modal-header" style="background-color:black;color:white;">
+					 <h1 >Sell it!
+					<button type="button" class="close" data-dismiss="modal"><big><span class="glyphicon glyphicon-remove-sign" style="color:white;"></big></span></button>
+					 	
+					 </h1>
+				</div>
+			<div class="modal-body">	
+			
+				<div >
+					<form>
+					<div class="form-group">
+							<div class="dropdown">
+							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width:200px;">Select category
+							  <span class="caret"></span></button>
+							  <ul class="dropdown-menu">
+								<li><a href="#">Cars</a></li>
+								<li><a href="#">Bikes</a></li>
+								<li><a href="#">Mobiles</a></li>
+								<li><a href="#">Books</a></li>
+								<li><a href="#">Furniture</a></li>
+								<li><a href="#">Home aplliances</a></li>
+								<li><a href="#">Accessories</a></li>
+								<li><a href="#">Others</a></li>
+							  </ul>
+							</div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control"  id="username" placeholder="Product title">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="enter name of the product">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="description" style="height:150px;">
+					</div>
+					<div class="form-group">
+						<input type="file" class="form-control" id="username" placeholder="upload photos">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="Enter contact number">
+					</div>
+					
+					<div class="form-group">
+						<center><input type="submit" class="btn btn-success btn-lg" formaction="index.html"></button></center>
+					</div>
+				</form>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	       <!-- end of post ad modal-->
+		<script src="slide_left_right.js"></script>
+			 
+	</body>
+</html> 
